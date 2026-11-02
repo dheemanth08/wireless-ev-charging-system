@@ -39,10 +39,12 @@ The system consists of two main sections:
 
 - MATLAB Simulink and Simscape Electrical
 - Arduino IDE
-- ESP32
+- ESP32 Microcontrollers
 - Visual Studio Code
-- Wi-Fi and IoT communication
-- Blynk IoT / Web-based monitoring interface
+- HTML, CSS and JavaScript
+- Node.js and Express.js
+- Wi-Fi-based IoT Communication
+- Custom Web-Based Monitoring Dashboard
 
 ## Simulation Parameters
 
