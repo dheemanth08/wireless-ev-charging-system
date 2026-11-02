@@ -1,4 +1,3 @@
-
 # Design and Optimization of Energy-Efficient Static Wireless Charging System for Electric Vehicles
 
 ## Project Overview
