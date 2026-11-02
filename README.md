@@ -5,28 +5,30 @@
 
 This project presents the design and development of a static wireless charging system for Electric Vehicles (EVs). It uses transmitter and receiver coil PCBs to transfer electrical energy wirelessly, eliminating the need for a direct charging cable connection.
 
-The system integrates ESP32 microcontrollers, sensors, an OLED display, and a Wi-Fi-based monitoring interface to monitor battery charging parameters.
+The system integrates ESP32 microcontrollers, a relay-based charging control arrangement, voltage and current sensors, an OLED display, and a custom Wi-Fi-enabled web monitoring dashboard. The dashboard can be accessed through both desktop computers and mobile devices to monitor battery charging parameters.
 
 ## Objectives
 
-1. Develop a transmitter–receiver coil system for wireless EV charging.
-2. Monitor battery voltage, charging current, state of charge (SOC), and charging status.
-3. Display charging information locally and through a website/mobile interface.
-4. Incorporate relay-based charging control.
+1. To develop a transmitter–receiver coil system for wireless power transfer in EV battery charging.
+2. To monitor battery voltage, charging current, state of charge (SOC), and charging status.
+3. To display charging information locally through an OLED display and remotely through a custom website accessible on computers and mobile devices.
+4. To incorporate relay-based charging control to support automatic charging management.
 
 ## System Architecture
 
 The system consists of two main sections:
 
 ### 1. Transmitter – ESP32 #1
+
 - 12 V, 5 A SMPS power supply.
 - LM2596 DC-DC buck converter.
 - Transmitter coil PCB.
 - IRF540N MOSFET.
-- Relay module.
+- Relay module for charging control.
 - ESP32 #1 for transmitter-side control.
 
 ### 2. Receiver – ESP32 #2
+
 - Receiver coil PCB.
 - ACS712 current sensor.
 - Voltage sensor.
@@ -44,7 +46,7 @@ The system consists of two main sections:
 - HTML, CSS and JavaScript
 - Node.js and Express.js
 - Wi-Fi-based IoT Communication
-- Custom Web-Based Monitoring Dashboard
+- Custom Responsive Web-Based Monitoring Dashboard
 
 ## Simulation Parameters
 
@@ -73,9 +75,10 @@ Charging power is calculated using:
 
 P = V × I
 
-## Repository Structure
+P = 3.94 × 0.10 = 0.394 W ≈ 0.40 W
 
-```text
+The prototype displayed a charging status of CHARGING, with a battery SOC of 74%, voltage of 3.94 V, current of 0.10 A, and charging power of approximately 0.40 W.
+
 wireless-ev-charging-system/
 │
 ├── ESP32_Code/
@@ -83,8 +86,15 @@ wireless-ev-charging-system/
 │   ├── ESP32_2_Receiver.ino
 │   └── README.md
 │
+├── Website/
+│   ├── frontend/
+│   ├── backend/
+│   └── README.md
+│
+├── Images/
+│   └── Wireless EV Prototype.jpeg
+│
 └── README.md
-```
 
 ## Applications
 
@@ -96,12 +106,10 @@ wireless-ev-charging-system/
 
 ## Future Scope
 
-- Improve wireless power transfer efficiency.
-- Optimize transmitter and receiver coil alignment.
-- Enhance battery monitoring accuracy.
-- Improve IoT dashboard functionality.
-- Validate and improve automatic charging control.
-- Extend the system for higher-power EV applications.
+- Improve wireless power transfer efficiency and coil alignment.
+- Extend the system to support dynamic wireless charging for moving electric vehicles.
+- Enhance battery monitoring accuracy and relay-based charging control.
+- Develop the system for higher-power EV applications.
 
 ## Project Domain
 
